@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>おみくじ</title>
+</head>
+<body>
+    <p>おみくじ： 大凶＜凶＜末吉＜小吉＜中吉＜吉＜大吉</p>
+    <button type="button" onclick="omikuji()">おみくじを引く</button><br>
+    <p id="result"></p>
+    
+    <script>
+       function omikuji(){
+        let num=Math.round(Math.random()*10);
+        let result=document.getElementById("result");
+        if(num>=0 && num<=1){
+            result.textContent="大凶";
+        }
+        else if(num>1 && num<=2){
+            result.textContent="凶";
+        }
+        else if(num>2 && num<=3){
+            result.textContent="末吉";
+        }
+        else if(num>3 && num<=4){
+            result.textContent="小吉";
+        }
+        else if(num>4 && num<=5){
+            result.textContent="中吉";
+        }
+        else if(num>5 && num<=6){
+            result.textContent="吉";
+        }
+        else{
+            result.textContent="大吉";
+        }
+    }
+
+    </script>
+</body>
+</html>
